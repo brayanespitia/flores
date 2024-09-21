@@ -8,14 +8,33 @@
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>FLORES</title>
 	
-	    
-
+	    <style>
+        /* Estilos para el pop-up */
+        #popupMessage {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            z-index: 1000;
+            display: none; /* Oculto por defecto */
+        }
+    </style>
 
 </head>
 
 <body class="container">
     <div class="night"></div>
-    <div class="flowers">	
+    <div class="flowers">
+	
+	
+	
+	
       <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
           <div class="flower__leaf flower__leaf--1"></div>
@@ -345,10 +364,9 @@
         frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
     <script>
-        // Al hacer clic en cualquier parte del body, desmuteamos el video
-        document.body.addEventListener('click', function() {
+         // Usamos eventos táctiles para dispositivos móviles
+         document.body.addEventListener('touchstart', function() {
             var iframe = document.getElementById('youtubeVideo');
-            // Cambiar mute=1 por mute=0 en el src para activar el sonido
             var src = iframe.src.replace("mute=1", "mute=0");
             iframe.src = src;
         });
