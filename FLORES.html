@@ -8,23 +8,7 @@
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>FLORES</title>
 	
-	    <style>
-        /* Estilos para el pop-up */
-        #popupMessage {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 20px;
-            z-index: 1000;
-            display: none; /* Oculto por defecto */
-        }
-    </style>
+	    
 
 </head>
 
@@ -34,15 +18,7 @@
     <div class="night"></div>
     
     <div class="flowers">   
-      <button id="playSoundBtn">Haz clic para reproducir sonido</button>
-      <audio id="audioPlayer" src="floresmarillas.mp3" preload="auto"></audio>
-  
-      <script>
-          document.getElementById('playSoundBtn').addEventListener('click', function() {
-              var audio = document.getElementById('audioPlayer');
-              audio.play();
-          });
-      </script>
+      
 	
       <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
@@ -51,6 +27,16 @@
           <div class="flower__leaf flower__leaf--3"></div>
           <div class="flower__leaf flower__leaf--4"></div>
           <div class="flower__white-circle"></div>
+
+          <button id="playSoundBtn">Haz clic para reproducir sonido</button>
+      <audio id="audioPlayer" src="floresmarillas.mp3" preload="auto"></audio>
+  
+      <script>
+          document.getElementById('playSoundBtn').addEventListener('click', function() {
+              var audio = document.getElementById('audioPlayer');
+              audio.play();
+          });
+      </script>
   
           <div class="flower__light flower__light--1"></div>
           <div class="flower__light flower__light--2"></div>
