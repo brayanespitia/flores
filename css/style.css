@@ -96,5 +96,21 @@ body{
     background-color: orange; /* Cambia el color de fondo al pasar el mouse a naranja */
     box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow; /* Efecto de resplandor amarillo */
   }
-  
+  #playSoundBtn {
+    position: absolute; /* Posiciona el botón fuera del flujo normal */
+    top: 10px; /* Ajusta la posición en la parte superior */
+    right: 10px; /* Ajusta la posición en la parte derecha */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que el botón esté encima de otros elementos */
+}
+
+#playSoundBtn:hover {
+    background-color: #2980b9;
+}
   

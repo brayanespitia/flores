@@ -8,33 +8,8 @@
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>FLORES</title>
 </head>
-<body>
-<!-- Pop-up que se mostrará por 5 segundos -->
-    <div id="popupMessage">¡Toque la pantalla para activar el sonido!</div>
+<body>  
 
-    <script>
-        // Mostrar el pop-up por 5 segundos
-        function showPopup() {
-            var popup = document.getElementById('popupMessage');
-            popup.style.display = 'block'; // Mostrar el pop-up
-            setTimeout(function() {
-                popup.style.display = 'none'; // Ocultar el pop-up después de 5 segundos
-            }, 5000);
-        }
-
-        // Mostrar el pop-up cuando se carga la página
-        window.onload = function() {
-            showPopup();
-        };
-
-        // Al hacer clic en cualquier parte del body, desmuteamos el video
-        document.body.addEventListener('click', function() {
-            var iframe = document.getElementById('youtubeVideo');
-            // Cambiar mute=1 por mute=0 en el src para activar el sonido
-            var src = iframe.src.replace("mute=1", "mute=0");
-            iframe.src = src;
-        });
-    </script>
 
     
 
@@ -60,7 +35,7 @@
         <span></span>
     </div>
     <div class="description">
-        <span>tengo un regalito para tí!!</span>
+        <span>tengo un regalo para tí!!</span>
     </div>
     <div class="button">
         <button>
