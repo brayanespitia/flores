@@ -28,12 +28,21 @@
 
 </head>
 
+
 <body class="container">
+  
     <div class="night"></div>
-    <div class="flowers">
-	
-	
-	
+    
+    <div class="flowers">   
+      <button id="playSoundBtn">Haz clic para reproducir sonido</button>
+      <audio id="audioPlayer" src="floresmarillas.mp3" preload="auto"></audio>
+  
+      <script>
+          document.getElementById('playSoundBtn').addEventListener('click', function() {
+              var audio = document.getElementById('audioPlayer');
+              audio.play();
+          });
+      </script>
 	
       <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
@@ -359,18 +368,6 @@
     </div>
     <script src="main.js"></script>
 	
-	<iframe id="youtubeVideo" width="10" height="10"
-        src="https://www.youtube.com/embed/PykXcyfPUk4?autoplay=1&mute=1"
-        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-    <script>
-        // Al hacer clic en cualquier parte del body, desmuteamos el video
-        document.body.addEventListener('click', function() {
-            var iframe = document.getElementById('youtubeVideo');
-            // Cambiar mute=1 por mute=0 en el src para activar el sonido
-            var src = iframe.src.replace("mute=1", "mute=0");
-            iframe.src = src;
-        });
-    </script>
+	
   </body>
 </html>
