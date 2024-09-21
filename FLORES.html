@@ -359,17 +359,32 @@
     </div>
     <script src="main.js"></script>
 	
-	<iframe id="youtubeVideo" width="10" height="10"
-        src="https://www.youtube.com/embed/PykXcyfPUk4?autoplay=1&mute=1"
-        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div id="popupMessage">¡Toque la pantalla para activar el sonido!</div>
 
     <script>
-         // Usamos eventos táctiles para dispositivos móviles
-         document.body.addEventListener('touchstart', function() {
-            var iframe = document.getElementById('youtubeVideo');
-            var src = iframe.src.replace("mute=1", "mute=0");
-            iframe.src = src;
+        // Mostrar el pop-up por 5 segundos
+        function showPopup() {
+            var popup = document.getElementById('popupMessage');
+            popup.style.display = 'block';
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 5000);
+        }
+
+        // Esperar a la interacción del usuario para iniciar el audio
+        document.body.addEventListener('click', function() {
+            var iframe = document.getElementById('youtubeAudio');
+            var src = iframe.getAttribute('data-src');
+            iframe.src = src;  // Iniciar el video con sonido
         });
+
+        window.onload = function() {
+            showPopup(); // Mostrar el mensaje cuando se cargue la página
+        };
     </script>
+
+    <!-- El iframe se carga con mute activado, pero se reemplaza después del clic -->
+    <iframe id="youtubeAudio" width="10" height="10" data-src="https://www.youtube.com/embed/PykXcyfPUk4?autoplay=1&mute=0" 
+        src="about:blank" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </body>
 </html>
